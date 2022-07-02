@@ -7,21 +7,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webook | Online Courses</title>
 
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="app/images/logo/Favicon.svg" type="image/x-icon">
+
     <!-- fonts link  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
 
     <!-- css  -->
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="app/scss/style.css">
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="app/images/logo/Favicon.svg" type="image/x-icon">
+    <!-- scripts -->
+    <script src="app/js/script.js" defer></script>
+
+    <!-- icons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
 </head>
 
 <body>
-
-    <script src="app/js/script.js" defer></script>
+    <header class="header">
+        <div class="logo">
+            <img src="app/images/logo/logo.svg" alt="">
+        </div>
+        <nav class="navbar">
+            <ul class="navbar-list" id="primary-navbar" data-visiable="false">
+                <li><a href="#" class="navbar-links">Home</a></li>
+                <li><a href="#" class="navbar-links">Features</a></li>
+                <li><a href="#" class="navbar-links">About</a></li>
+                <li><a href="#" class="navbar-links">Contact</a></li>
+                <li><a href="#" class="btn btn-get-courses"><span>Get Courses</span></a></li>
+            </ul>
+        </nav>
+    </header>
 </body>
 
 </html>

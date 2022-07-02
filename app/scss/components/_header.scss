@@ -1,0 +1,103 @@
+// header or navbar class is here 
+
+@use "../global" as *;
+@use "../util" as *;
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem rem(80);
+
+
+
+    .logo{
+        width: rem(160);
+    }
+
+    .navbar{
+        &-list{
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+
+            .navbar-links{
+                color: var(--white);
+                font-size: rem(16);
+                font-weight: 600;
+                letter-spacing: rem(2);
+                display: inline-block;
+
+                &::after{
+                    content: '';
+                    display: block;
+                    width:0 ;
+                    height: rem(2);
+                    background-color: var(--primarycolor);
+                    transition: all 350ms;
+                    border-radius: rem(5);
+                }
+
+                &:hover::after{
+                    width: 100%;
+                }
+
+
+            }
+
+            .btn-get-courses{
+                position: relative;
+                overflow: hidden;
+                
+                span{
+                    font-size: rem(20);
+                }
+
+
+                &::after{
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    transform: translateX(100%);
+                    transition: all 350ms ease-out;
+                    position: absolute;
+                    opacity: 20%;
+                    top: 0;
+                    left: 0;
+                    background-color: var(--blue);
+
+                }
+
+                &:hover::after{
+                    transform: translateX(0);
+                }
+
+
+
+
+            }
+
+
+
+        }
+    }
+
+
+
+    @include breakpoint-down(large) {
+        padding: 1rem rem(40);
+
+    }
+
+    @include breakpoint-down(small) {
+        padding: 1rem rem(20);
+
+        .logo {
+            width: rem(120);
+        }
+
+        .navbar{
+            display: none;
+        }
+    }
+}

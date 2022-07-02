@@ -11,6 +11,20 @@ html {
 
 body {
   font-family: var(--outfit);
+  background-color: var(--Backgroundcolor);
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+ion-icon {
+  font-size: 2.25rem;
+  cursor: pointer;
 }
 
 h1, h2, h3 {
@@ -19,6 +33,7 @@ h1, h2, h3 {
 
 a, a:visited, a:hover {
   text-decoration: none;
+  display: inline-block;
 }
 
 :root {
@@ -33,4 +48,84 @@ a, a:visited, a:hover {
 
 :root {
   --outfit:"Outfit",sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5rem;
+}
+.header .logo {
+  width: 10rem;
+}
+.header .navbar-list {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.header .navbar-list .navbar-links {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.125rem;
+  display: inline-block;
+}
+.header .navbar-list .navbar-links::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0.125rem;
+  background-color: var(--primarycolor);
+  transition: all 350ms;
+  border-radius: 0.3125rem;
+}
+.header .navbar-list .navbar-links:hover::after {
+  width: 100%;
+}
+.header .navbar-list .btn-get-courses {
+  position: relative;
+  overflow: hidden;
+}
+.header .navbar-list .btn-get-courses span {
+  font-size: 1.25rem;
+}
+.header .navbar-list .btn-get-courses::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  transform: translateX(100%);
+  transition: all 350ms ease-out;
+  position: absolute;
+  opacity: 20%;
+  top: 0;
+  left: 0;
+  background-color: var(--blue);
+}
+.header .navbar-list .btn-get-courses:hover::after {
+  transform: translateX(0);
+}
+@media (max-width: 63.9375em) {
+  .header {
+    padding: 1rem 2.5rem;
+  }
+}
+@media (max-width: 50.5625em) {
+  .header {
+    padding: 1rem 1.25rem;
+  }
+  .header .logo {
+    width: 7.5rem;
+  }
+  .header .navbar {
+    display: none;
+  }
+}
+
+.btn {
+  background-color: var(--primarycolor);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }/*# sourceMappingURL=style.css.map */
