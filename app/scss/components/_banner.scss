@@ -55,6 +55,7 @@
 
         img{
             z-index: 400;
+            transform: scaleX(-1);
         }
 
         .circle{
@@ -98,17 +99,18 @@
             }
         }
         .info-expert{
-            top: 30px;
-            left: -30px;
+            top: 0;
+            right: 0;
+            z-index: -1000;
         }
         .info-live{
             top: 180px;
-            right: 10px;
+            left: 10px;
         }
 
         .info-chat{
             bottom: 70px;
-            left: -100px;
+            right: -20px;
         }
 
 
@@ -149,11 +151,11 @@
                 grid-column: span 4;
 
                 .info-chat{
-                    left: 10px;
+                    right: 20px;
                 }
 
                 .info-expert{
-                    left: 10px;
+                    right: 30px;
                 }
             }
         }
@@ -161,8 +163,7 @@
         @media (max-width:26.25rem) { // 410px
             .image-area{
                 .info-expert{
-                    top: 0px;
-                    left: 0px;
+                    top: 10px;
                 }
 
                 .info-live{
@@ -170,8 +171,8 @@
                 }
 
                 .info-chat{
-                    bottom: -30px;
-                    left: 0px;
+                    bottom: 30px;
+                    right: 0px;
                 }
             }
         }
