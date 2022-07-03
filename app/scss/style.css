@@ -358,7 +358,7 @@ a, a:visited, a:hover {
 }
 @media (max-width: 26.25rem) {
   .banner .image-area .info-expert {
-    top: -20px;
+    top: 0px;
     left: 0px;
   }
   .banner .image-area .info-live {
