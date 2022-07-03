@@ -1,7 +1,13 @@
+//pre loaddder 
+
+const loadder = document.getElementById("preloadder");
+
+window.addEventListener("load",()=>{
+    loadder.style.display = "none";
+});
+
+
 // nav bar 
-
-
-
 const header = document.getElementById('header');
 const toggle = document.getElementById('toggle');
 const navbar = document.getElementById('primary-navbar');

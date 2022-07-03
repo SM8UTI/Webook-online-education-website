@@ -12,6 +12,7 @@ html {
 body {
   font-family: var(--outfit);
   background-color: var(--Backgroundcolor);
+  overflow-x: hidden;
 }
 
 li {
@@ -53,6 +54,7 @@ a, a:visited, a:hover {
 :root {
   --toggleimg:url(../images/menu-alt.png);
   --toggleactiveimg:url(../images/menu-x.png);
+  --preloadder:url(../images/preloader.gif);
 }
 
 .header {
@@ -175,4 +177,21 @@ a, a:visited, a:hover {
   padding: 0.5rem 1rem;
   border-radius: 0.2rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+#preloadder {
+  width: 100%;
+  height: 100vh;
+  background-color: #101010;
+  background-image: var(--preloadder);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 15%;
+  z-index: 100;
+  position: fixed;
+}
+@media (max-width: 50.625em) {
+  #preloadder {
+    background-size: 20%;
+  }
 }/*# sourceMappingURL=style.css.map */
