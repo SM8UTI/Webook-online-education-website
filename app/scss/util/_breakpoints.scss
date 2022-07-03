@@ -4,11 +4,13 @@
 $breakpoints-up:(
     "large":64em,
     "small":50.625em,
+    "mobile":48rem,
 );
 
 $breakpoints-down:(
     "large":63.9375em,
-    "small":50.5625em,
+    "small":50.625em,
+    "mobile":47.937rem,
 );
 
 @mixin breakpoint-down($size) {

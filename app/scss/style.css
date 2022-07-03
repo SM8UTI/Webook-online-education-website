@@ -50,11 +50,17 @@ a, a:visited, a:hover {
   --outfit:"Outfit",sans-serif;
 }
 
+:root {
+  --toggleimg:url(../images/menu-alt.png);
+  --toggleactiveimg:url(../images/menu-x.png);
+}
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 5rem;
+  position: relative;
 }
 .header .logo {
   width: 10rem;
@@ -105,20 +111,61 @@ a, a:visited, a:hover {
 .header .navbar-list .btn-get-courses:hover::after {
   transform: translateX(0);
 }
+.header .menu-hamburger {
+  display: none;
+}
 @media (max-width: 63.9375em) {
   .header {
     padding: 1rem 2.5rem;
   }
 }
-@media (max-width: 50.5625em) {
+@media (max-width: 50.625em) {
   .header {
     padding: 1rem 1.25rem;
   }
   .header .logo {
     width: 7.5rem;
   }
-  .header .navbar {
-    display: none;
+}
+@media (max-width: 47.937rem) {
+  .header .navbar-list {
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 60%;
+    height: 100vh;
+    bottom: 0;
+    right: -100%;
+    background-color: var(--secondarycolor);
+    transition: all 350ms ease-out;
+  }
+  .header .navbar-list .navbar-links {
+    font-size: 1.5rem;
+  }
+  .header .navbar-list.active {
+    right: 0;
+  }
+  .header .menu-hamburger {
+    position: absolute;
+    top: 0.8rem;
+    right: 0rem;
+    z-index: 9999;
+    display: block;
+    width: 3rem;
+    aspect-ratio: 1/1;
+    background-color: var(--primarycolor);
+    background-image: var(--toggleimg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+  }
+  .header .menu-hamburger.active {
+    background-color: var(--lightblue);
+    background-image: var(--toggleactiveimg);
   }
 }
 
