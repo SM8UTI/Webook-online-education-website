@@ -313,7 +313,7 @@ a, a:visited, a:hover {
 }
 .banner .image-area .info-live {
   top: 180px;
-  left: 240px;
+  right: 10px;
 }
 .banner .image-area .info-chat {
   bottom: 70px;
@@ -338,9 +338,10 @@ a, a:visited, a:hover {
 }
 @media (max-width: 50.625em) {
   .banner {
+    margin-top: 2.5rem;
     padding: 1rem 1.25rem;
     height: 80vh;
-    row-gap: 2rem;
+    row-gap: 0.5rem;
   }
   .banner .text-area {
     grid-column: span 4;
@@ -356,7 +357,15 @@ a, a:visited, a:hover {
   }
 }
 @media (max-width: 26.25rem) {
-  .banner .image-area .info {
-    display: none;
+  .banner .image-area .info-expert {
+    top: -20px;
+    left: 0px;
+  }
+  .banner .image-area .info-live {
+    top: 120px;
+  }
+  .banner .image-area .info-chat {
+    bottom: -30px;
+    left: 0px;
   }
 }/*# sourceMappingURL=style.css.map */

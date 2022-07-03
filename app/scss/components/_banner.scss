@@ -103,7 +103,7 @@
         }
         .info-live{
             top: 180px;
-            left: 240px;
+            right: 10px;
         }
 
         .info-chat{
@@ -135,9 +135,10 @@
         }
     
         @include breakpoint-down(small) {
+            margin-top: rem(40);
             padding: 1rem rem(20);
             height: 80vh;
-            row-gap: 2rem;
+            row-gap: 0.5rem;
 
             .text-area {
                  grid-column: span 4;
@@ -157,10 +158,20 @@
             }
         }
 
-        @media (max-width:26.25rem) { // 720px
+        @media (max-width:26.25rem) { // 410px
             .image-area{
-                .info{
-                    display: none;
+                .info-expert{
+                    top: -20px;
+                    left: 0px;
+                }
+
+                .info-live{
+                    top: 120px;
+                }
+
+                .info-chat{
+                    bottom: -30px;
+                    left: 0px;
                 }
             }
         }
