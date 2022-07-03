@@ -341,7 +341,7 @@ a, a:visited, a:hover {
     margin-top: 2.5rem;
     padding: 1rem 1.25rem;
     height: 80vh;
-    row-gap: 0.5rem;
+    row-gap: 2rem;
   }
   .banner .text-area {
     grid-column: span 4;
