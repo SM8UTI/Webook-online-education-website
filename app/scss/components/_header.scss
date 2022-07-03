@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem rem(80);
+    padding: 1rem rem(120);
     position: relative;
 
 
@@ -79,7 +79,9 @@
         display: none;
     }
 
-
+    @include breakpoint-down(x-large) {
+        padding: 1rem rem(60);
+    }
     @include breakpoint-down(large) {
         padding: 1rem rem(40);
 
@@ -123,7 +125,7 @@
 
 
         .menu-hamburger{
-            position: absolute;
+            position: fixed;
             top: 0.8rem;
             right: 0rem;
             z-index: 9999;

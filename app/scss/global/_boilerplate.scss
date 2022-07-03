@@ -3,12 +3,32 @@
 html{
     font-size: 100%;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+
 }
+/* width */
+::-webkit-scrollbar {
+    width: rem(10);
+    background-color: var(--lightblue);
+    outline: 1px solid slategrey;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--lightblue);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--blue);
+}
+
 
 *,*::after,*::before{
     box-sizing: inherit;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -23,6 +43,12 @@ li{
 
 img{
     width: 100%;
+}
+
+section{
+    width: 100%;
+    min-height: 100vh;
+    padding: 1rem rem(120);
 }
 
 ion-icon{
