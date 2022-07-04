@@ -57,6 +57,12 @@ h1, h2, h3 {
   margin-top: 0;
 }
 
+p {
+  font-size: rem(18);
+  color: var(--darkishwhite);
+  margin-bottom: 1rem;
+}
+
 a, a:visited, a:hover {
   text-decoration: none;
   display: inline-block;
@@ -80,6 +86,7 @@ a, a:visited, a:hover {
   --toggleimg:url(../images/menu-alt.png);
   --toggleactiveimg:url(../images/menu-x.png);
   --preloadder:url(../images/preloader.gif);
+  --featuresimage:url("https://images.unsplash.com/photo-1605711285791-0219e80e43a3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80");
 }
 
 .header {
@@ -209,10 +216,19 @@ a, a:visited, a:hover {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
-.row {
+.column-4 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0 2rem;
+}
+
+.column-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.row {
+  grid-template-rows: repeat(3, 1fr);
 }
 
 #preloadder {
@@ -223,7 +239,7 @@ a, a:visited, a:hover {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 15%;
-  z-index: 100;
+  z-index: 10000;
   position: fixed;
 }
 @media (max-width: 50.625em) {
@@ -249,7 +265,6 @@ a, a:visited, a:hover {
   color: var(--primarycolor);
 }
 .banner .text-area .text-part p {
-  font-size: 1.125rem;
   color: var(--darkishwhite);
   margin-bottom: 1rem;
 }
@@ -368,5 +383,119 @@ a, a:visited, a:hover {
   .banner .image-area .info-chat {
     bottom: 30px;
     right: 0px;
+  }
+}
+
+.features {
+  position: relative;
+  margin-top: -5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: var(--secondarycolor);
+}
+.features .custom-shape-divider-bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+}
+.features .custom-shape-divider-bottom .shape-fill {
+  fill: var(--Backgroundcolor);
+}
+.features .main-container {
+  margin: 8rem 0;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+}
+.features .main-container .text-part {
+  grid-column: span 1;
+}
+.features .main-container .text-part .feature-card {
+  margin-top: 2rem;
+  gap: 0.5rem;
+}
+.features .main-container .text-part .feature-card ion-icon {
+  font-size: 3.125rem;
+  color: var(--lightblue);
+  margin-bottom: 0.8rem;
+}
+.features .main-container .text-part .feature-card .card {
+  background-color: var(--Backgroundcolor);
+  color: var(--white);
+  padding: 1.3rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+}
+.features .main-container .text-part .feature-card .card p {
+  color: var(--darkishwhite);
+}
+.features .main-container .text-part .feature-card .card3 {
+  grid-column: span 2;
+}
+.features .main-container .text-part h1 {
+  font-size: 2.5rem;
+  color: var(--white);
+}
+.features .main-container .text-part p {
+  margin: 1rem 0;
+}
+.features .main-container .image-part {
+  grid-column: span 1;
+  position: relative;
+  background-image: var(--featuresimage);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.features .main-container .image-part .overlay-text {
+  text-align: right;
+  z-index: 100;
+  font-size: 3rem;
+  color: var(--white);
+  opacity: 70%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 0 1rem;
+}
+.features .main-container .image-part .overlay-color {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--primarycolor);
+  width: 100%;
+  height: 100%;
+  opacity: 40%;
+}
+@media (max-width: 70.625rem) {
+  .features {
+    padding: 3rem 3.75rem;
+  }
+}
+@media (max-width: 50.625em) {
+  .features {
+    padding: 3rem 1.25rem;
+    margin-top: 6rem;
+  }
+  .features .main-container {
+    grid-template-rows: 300px auto;
+    row-gap: 2rem;
+  }
+  .features .main-container .text-part {
+    grid-column: span 2;
+  }
+  .features .main-container .text-part .feature-card .card1, .features .main-container .text-part .feature-card .card2 {
+    grid-column: span 2;
+  }
+  .features .main-container .image-part {
+    grid-row-start: 1;
+    grid-column: span 2;
   }
 }/*# sourceMappingURL=style.css.map */
