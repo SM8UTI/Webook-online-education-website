@@ -200,6 +200,8 @@ a, a:visited, a:hover {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    border-radius: 5px 0px 0px 5px;
+    box-shadow: hsla(0deg, 0%, 0%, 0.24) 0px 3px 8px;
     cursor: pointer;
   }
   .header .menu-hamburger.active {
@@ -313,7 +315,7 @@ a, a:visited, a:hover {
   position: absolute;
   cursor: pointer;
   border: 4px solid var(--secondarycolor);
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  box-shadow: hsla(206deg, 6%, 25%, 0.3) 0px 1px 2px 0px, hsla(206deg, 6%, 25%, 0.15) 0px 1px 3px 1px;
   transition: border 350ms ease-out;
 }
 .banner .image-area .info span {
@@ -419,16 +421,21 @@ a, a:visited, a:hover {
   font-size: 3.125rem;
   color: var(--lightblue);
   margin-bottom: 0.8rem;
+  transition: color 350ms ease-in;
 }
 .features .main-container .text-part .feature-card .card {
   background-color: var(--Backgroundcolor);
   color: var(--white);
   padding: 1.3rem;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: hsla(0deg, 0%, 0%, 0.24) 0px 3px 8px;
   border-radius: 10px;
+  cursor: pointer;
 }
 .features .main-container .text-part .feature-card .card p {
   color: var(--darkishwhite);
+}
+.features .main-container .text-part .feature-card .card:hover ion-icon {
+  color: var(--secondarycolor);
 }
 .features .main-container .text-part .feature-card .card3 {
   grid-column: span 2;
@@ -449,12 +456,12 @@ a, a:visited, a:hover {
   background-repeat: no-repeat;
   overflow: hidden;
   border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: hsla(0deg, 0%, 0%, 0.24) 0px 3px 8px;
 }
 .features .main-container .image-part .overlay-text {
   text-align: right;
   z-index: 100;
-  font-size: 3rem;
+  font-size: 3.6rem;
   color: var(--white);
   opacity: 70%;
   width: 100%;
@@ -478,6 +485,9 @@ a, a:visited, a:hover {
   .features {
     padding: 3rem 3.75rem;
   }
+  .features .image-part .overlay-text {
+    font-size: 4rem;
+  }
 }
 @media (max-width: 50.625em) {
   .features {
@@ -485,7 +495,7 @@ a, a:visited, a:hover {
     margin-top: 6rem;
   }
   .features .main-container {
-    grid-template-rows: 300px auto;
+    grid-template-rows: 18.75rem auto;
     row-gap: 2rem;
   }
   .features .main-container .text-part {
@@ -497,5 +507,198 @@ a, a:visited, a:hover {
   .features .main-container .image-part {
     grid-row-start: 1;
     grid-column: span 2;
+  }
+}
+
+.courses {
+  background-color: var(--secondarycolor);
+  margin: 0;
+  padding-top: 2rem;
+  position: relative;
+}
+.courses .text-part h1 {
+  font-size: 3.5rem;
+  color: var(--white);
+  text-align: right;
+}
+.courses .text-part hr {
+  width: 100%;
+  height: 0.5rem;
+  background-color: var(--primarycolor);
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  margin: 1rem 0;
+  box-shadow: 0px 0px 10px 2px var(--blue);
+}
+.courses .overlay-text {
+  position: absolute;
+  top: 25%;
+  left: -180px;
+  z-index: 10;
+  display: inline-block;
+}
+.courses .overlay-text h2 {
+  font-size: 6rem;
+  opacity: 15%;
+  color: var(--darkishwhite);
+  transform: rotate(90deg);
+}
+.courses .main-container {
+  margin-top: 2rem;
+  z-index: 900;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(17.1875rem, 1fr));
+  gap: 2rem;
+}
+.courses .main-container .card {
+  position: relative;
+  z-index: inherit;
+  background-color: var(--Backgroundcolor);
+  border-radius: 0.625rem;
+  box-shadow: hsla(0deg, 0%, 0%, 0.24) 0px 3px 8px;
+  overflow: hidden;
+}
+.courses .main-container .card_image {
+  width: 100%;
+}
+.courses .main-container .card_image img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 60%;
+}
+.courses .main-container .card_info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 2rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+.courses .main-container .card_info ion-icon {
+  font-size: 1.875rem;
+}
+.courses .main-container .card_info_rating {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.courses .main-container .card_info_rating .rating_box {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+  background-color: var(--secondarycolor);
+  border-radius: 5px;
+}
+.courses .main-container .card_info_rating .rating_box ion-icon {
+  color: var(--primarycolor);
+}
+.courses .main-container .card_info_rating .rating_box span {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--primarycolor);
+}
+.courses .main-container .card_info_rating .rating_text p {
+  font-size: 1.3rem;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  color: var(--secondarycolor);
+}
+.courses .main-container .card_info_text a {
+  color: var(--white);
+  font-size: 2rem;
+  font-weight: 600;
+  transition: color 350ms ease-in;
+}
+.courses .main-container .card_info_text a:hover {
+  color: var(--primarycolor);
+}
+.courses .main-container .card_info_status {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+  align-items: center;
+}
+.courses .main-container .card_info_status ion-icon {
+  color: var(--primarycolor);
+}
+.courses .main-container .card_info_status .info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+  background-color: var(--secondarycolor);
+}
+.courses .main-container .card_info_status .info p {
+  margin: 0;
+  padding: 0;
+}
+.courses .main-container .card_info_price {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.courses .main-container .card_info_price p {
+  margin: 0;
+  padding: 0;
+}
+.courses .main-container .card_info_price .price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  -moz-column-gap: 0.4rem;
+       column-gap: 0.4rem;
+}
+.courses .main-container .card_info_price .price h1 {
+  font-size: 2rem;
+  color: var(--primarycolor);
+}
+.courses .main-container .card_info_price .price p {
+  text-decoration: line-through;
+  font-size: 1.3rem;
+  color: var(--darkishwhite);
+}
+.courses .main-container .card_info_price .btn-learnmore {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: 800;
+  border-radius: 0.3125rem;
+  transition: all 350ms ease-in;
+}
+.courses .main-container .card_info_price .btn-learnmore:hover {
+  background-color: var(--blue);
+}
+@media (max-width: 70.625rem) {
+  .courses {
+    padding: 3rem 3.75rem;
+  }
+}
+@media (max-width: 50.625em) {
+  .courses {
+    padding: 3rem 1.25rem;
+  }
+  .courses .overlay-text {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */
