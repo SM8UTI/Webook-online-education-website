@@ -6,12 +6,28 @@
     background-color: var(--secondarycolor);
     margin: 0;
     padding-top: 2rem;
-    position: relative;
+    // position: relative;
     .text-part{
+        position: relative;
         h1{
             font-size: 3.5rem;
             color: var(--white);
             text-align: right;
+            margin: 2rem 0;
+        }
+        .overlay-text {
+            position: absolute;
+            top: -20px;
+            left: 0;
+            z-index: 10;
+            display: inline-block;
+
+            h2 {
+                font-size: 6rem;
+                opacity: 15%;
+                color: var(--darkishwhite);
+                // transform: rotate(90deg);
+            }
         }
 
         hr{
@@ -26,17 +42,28 @@
         }
     }
 
-    .overlay-text{
-        position: absolute;
-        top: 25%;
-        left:-180px;
-        z-index: 10;
-        display: inline-block;
-        h2{
-            font-size: 6rem;
-            opacity: 15%;
+    .lowerpart{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 2rem 0;
+        .btn-viewall{
+            font-size: 1.3rem;
+            font-weight: 600;
+            background-color: var(--Backgroundcolor);
             color: var(--darkishwhite);
-            transform: rotate(90deg);
+            outline:0;
+            border: none;
+            box-shadow: hsla(0, 0%, 0%, 0.24) 0px 3px 8px;
+            margin: 0 auto;
+            transition: all 300ms ease-in-out;
+            cursor: pointer;
+
+            &:hover{
+                background-color: var(--primarycolor);
+                color: white;
+            }
         }
     }
     .main-container{
@@ -73,7 +100,7 @@
                 margin-bottom: 2rem;
 
                 ion-icon{
-                    font-size: rem(30);
+                    font-size: rem(20);
                 }
 
                 &_rating{
@@ -95,7 +122,7 @@
                             color: var(--primarycolor);
                         }
                         span{
-                            font-size: 1.3rem;
+                            font-size: 1rem;
                             font-weight: 800;
                             color: var(--primarycolor);       
                         }
@@ -115,7 +142,7 @@
                 &_text{
                     a{
                         color: var(--white);
-                        font-size: 2rem;
+                        font-size: 1.5rem;
                         font-weight: 600;
                         transition: color 350ms ease-in;
 
@@ -192,7 +219,7 @@
                         outline: none;
                         border: none;
                         cursor: pointer;
-                        font-size: 1.3rem;
+                        font-size: 1rem;
                         font-weight: 800;
                         border-radius: rem(5);
                         transition: all 350ms ease-in;
@@ -215,8 +242,15 @@
     @include breakpoint-down(small) {
         padding: 3rem rem(20);
 
-        .overlay-text{
-            display: none;
+        .text-part{
+            .overlay-text{
+                top: rem(-10);
+                left: 0;
+                h2{
+                    transform: rotate(90deg);
+                    font-size: 2rem;
+                }
+            }
         }
     }
 }
