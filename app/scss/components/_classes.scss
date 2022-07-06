@@ -24,3 +24,29 @@
 .row{
     grid-template-rows:repeat(3,1fr);
 }
+
+.lowerpart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 2rem 0;
+
+    .btn-viewall {
+        font-size: 1.3rem;
+        font-weight: 600;
+        background-color: var(--Backgroundcolor);
+        color: var(--darkishwhite);
+        outline: 0;
+        border: none;
+        box-shadow: hsla(0, 0%, 0%, 0.24) 0px 3px 8px;
+        margin: 0 auto;
+        transition: all 300ms ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--primarycolor);
+            color: white;
+        }
+    }
+}
