@@ -33,6 +33,10 @@ body {
   font-family: var(--outfit);
   background-color: var(--Backgroundcolor);
   overflow-x: hidden;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 li {
@@ -45,6 +49,7 @@ img {
 
 section {
   width: 100%;
+  max-width: 93.75rem;
   min-height: 100vh;
   padding: 1rem 7.5rem;
 }
@@ -96,6 +101,9 @@ a, a:visited, a:hover {
   align-items: center;
   padding: 1rem 7.5rem;
   position: relative;
+  width: 100%;
+  max-width: 93.75rem;
+  margin: 0 auto;
 }
 .header .logo {
   width: 10rem;
@@ -288,6 +296,10 @@ a, a:visited, a:hover {
   }
 }
 
+#banner {
+  margin: 0 auto;
+}
+
 .banner {
   height: 80vh;
   align-items: center;
@@ -426,6 +438,10 @@ a, a:visited, a:hover {
   }
 }
 
+#features {
+  margin: 0 auto;
+}
+
 .features {
   position: relative;
   margin-top: -5rem;
@@ -547,6 +563,10 @@ a, a:visited, a:hover {
     grid-row-start: 1;
     grid-column: span 2;
   }
+}
+
+#courses {
+  margin: 0 auto;
 }
 
 .courses {
@@ -750,6 +770,10 @@ a, a:visited, a:hover {
   }
 }
 
+#expert {
+  margin: 0 auto;
+}
+
 .expert {
   position: relative;
 }
@@ -879,6 +903,10 @@ a, a:visited, a:hover {
   }
 }
 
+#about {
+  margin: 0 auto;
+}
+
 .about {
   padding-top: 8rem;
   padding-bottom: 8rem;
@@ -909,6 +937,13 @@ a, a:visited, a:hover {
   font-size: 4rem;
   opacity: 60%;
   text-align: right;
+}
+.about_content .image {
+  width: 100%;
+  height: 100%;
+}
+.about_content .image img {
+  opacity: 70%;
 }
 .about_stats {
   margin: 5rem 0;

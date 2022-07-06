@@ -3,7 +3,9 @@
 @use "../global" as *;
 @use "../util" as *;
 
-
+#banner{
+    margin: 0 auto;
+}
 
 .banner{
     height: 80vh;

@@ -1,6 +1,9 @@
 @use "../global" as *;
 @use "../util" as *;
 
+#courses{
+    margin: 0 auto;
+}
 
 .courses{
     background-color: var(--secondarycolor);

@@ -1,6 +1,11 @@
 @use "../global" as *;
 @use "../util" as *;
 
+
+#expert{
+    margin: 0 auto;
+}
+
 .expert {
     position: relative;
     &_circle{

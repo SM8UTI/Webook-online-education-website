@@ -36,6 +36,10 @@ body{
     font-family: var(--outfit);
     background-color: var(--Backgroundcolor);
     overflow-x: hidden;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 li{
@@ -48,6 +52,7 @@ img{
 
 section{
     width: 100%;
+    max-width: rem(1500);
     min-height: 100vh;
     padding: 1rem rem(120);
 }

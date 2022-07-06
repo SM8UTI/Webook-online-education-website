@@ -1,6 +1,11 @@
 @use "../global" as *;
 @use "../util" as *;
 
+
+
+#features{
+    margin: 0 auto;
+}
 .features{
     position: relative;
     margin-top: -5rem;
