@@ -49,4 +49,19 @@
             color: white;
         }
     }
+
+}
+
+.blur-neon{
+    box-shadow: 0px 0px 25px 10px var(--secondarycolor);
+    opacity: 20%;
+}
+
+.circle{
+    width: 200px;
+    height: 200px;
+    background-color: var(--secondarycolor);
+    // border: none;
+    opacity: 80%;
+    border-radius: 500px;
 }

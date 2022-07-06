@@ -2,6 +2,12 @@
 @use "../util" as *;
 
 .expert {
+    position: relative;
+    &_circle{
+        position: absolute;
+        top: rem(160);
+        left: rem(-30);
+    }
     &_text {
         width: 50%;
         margin-bottom: 3rem;
@@ -20,6 +26,7 @@
 
 
         .card{
+            z-index: 888;
             display: grid;
             grid-template-columns: 1fr;
             grid-template-rows:300px 1fr 1fr 1fr;
@@ -123,5 +130,16 @@
                 }
             }
         }
+        &_circle {
+            position: absolute;
+            top: rem(300);
+            left: rem(-10);
+        }
+        &_circle2 {
+            position: absolute;
+            bottom: rem(300);
+            right: rem(-10);
+        }
     }
+
 }
