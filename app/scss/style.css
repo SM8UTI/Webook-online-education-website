@@ -849,6 +849,7 @@ a, a:visited, a:hover {
 }
 
 .expert {
+  position: relative;
   margin-bottom: 10rem;
 }
 .expert_circle {
