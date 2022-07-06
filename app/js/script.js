@@ -23,3 +23,6 @@ toggle.addEventListener('click',()=>{
     toggle.classList.toggle('active');
     navbar.classList.toggle('active');
 })
+
+
+// faq 
