@@ -1155,7 +1155,7 @@ a, a:visited, a:hover {
 }
 
 #contact {
-  margin: 0 auto;
+  margin: 0rem auto 8rem;
 }
 
 .contact {
@@ -1290,5 +1290,97 @@ a, a:visited, a:hover {
   }
   .contact_main .details .social {
     justify-content: left;
+  }
+}
+
+.subscribe {
+  background-color: var(--primarycolor);
+  padding: 1rem 7.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  line-height: 1.7;
+  letter-spacing: 0.125rem;
+}
+.subscribe .text h1 {
+  font-size: 2.8rem;
+  color: var(--white);
+}
+.subscribe .text p {
+  color: var(--white);
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.subscribe .input {
+  width: 60%;
+  max-width: 62.5rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 2rem;
+  color: var(--primarycolor);
+}
+.subscribe .input input {
+  width: 100%;
+  border-radius: 0.3125rem;
+  background-color: var(--Backgroundcolor);
+  color: var(--primarycolor);
+  outline: none;
+  border: none;
+  padding: 1rem;
+}
+.subscribe .input button {
+  cursor: pointer;
+  background-color: var(--Backgroundcolor);
+  color: var(--primarycolor);
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 800;
+  outline: none;
+  border: none;
+  margin: 1rem auto;
+  transition: all 350ms ease-in;
+}
+.subscribe .input button:hover {
+  background-color: var(--secondarycolor);
+}
+@media (max-width: 70.625rem) {
+  .subscribe {
+    padding: 1rem 3.75rem;
+  }
+}
+@media (max-width: 50.625em) {
+  .subscribe {
+    padding: 1rem 1.25rem;
+  }
+  .subscribe .input {
+    width: 100%;
+  }
+}
+
+#footer {
+  margin: 0 auto;
+}
+
+.footer {
+  width: 100%;
+  max-width: 93.75rem;
+  margin-bottom: 4rem;
+}
+.footer .subscribe {
+  margin: 0;
+  padding: 0;
+  background-color: var(--primarycolor);
+}
+@media (max-width: 70.625rem) {
+  .footer {
+    padding: 1rem 3.75rem;
+  }
+}
+@media (max-width: 50.625em) {
+  .footer {
+    padding: 1rem 1.25rem;
   }
 }/*# sourceMappingURL=style.css.map */
