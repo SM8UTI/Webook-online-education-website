@@ -47,7 +47,7 @@ img {
   width: 100%;
 }
 
-section {
+section, footer {
   width: 100%;
   max-width: 93.75rem;
   min-height: 100vh;
@@ -1365,14 +1365,66 @@ a, a:visited, a:hover {
 }
 
 .footer {
+  min-height: auto;
   width: 100%;
   max-width: 93.75rem;
-  margin-bottom: 4rem;
+  padding: 1rem 7.5rem;
+  margin: 4rem;
 }
-.footer .subscribe {
-  margin: 0;
-  padding: 0;
-  background-color: var(--primarycolor);
+.footer_main {
+  margin: 4rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15.625rem, 1fr));
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  align-items: center;
+}
+.footer_main .logo {
+  text-align: left;
+}
+.footer_main .company, .footer_main .resources, .footer_main .quick {
+  text-align: right;
+}
+.footer_main .company h1, .footer_main .resources h1, .footer_main .quick h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--primarycolor);
+}
+.footer_main .company ul, .footer_main .resources ul, .footer_main .quick ul {
+  display: flex;
+  justify-content: right;
+  flex-direction: column;
+}
+.footer_main .company ul li a, .footer_main .resources ul li a, .footer_main .quick ul li a {
+  font-size: 1rem;
+  color: var(--darkishwhite);
+  transition: all 350ms ease-in-out;
+}
+.footer_main .company ul li a:hover, .footer_main .resources ul li a:hover, .footer_main .quick ul li a:hover {
+  color: var(--blue);
+}
+.footer .copyright {
+  color: var(--white);
+  opacity: 80%;
+  letter-spacing: 0.0625rem;
+  font-weight: 400;
+  font-size: 0.8rem;
+  text-align: center;
+}
+.footer .copyright h1 {
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 0.3rem;
+       column-gap: 0.3rem;
+}
+.footer .copyright span, .footer .copyright a {
+  font-size: 0.9rem;
+  color: var(--primarycolor);
+}
+.footer .copyright a {
+  cursor: pointer;
 }
 @media (max-width: 70.625rem) {
   .footer {
@@ -1382,5 +1434,30 @@ a, a:visited, a:hover {
 @media (max-width: 50.625em) {
   .footer {
     padding: 1rem 1.25rem;
+  }
+  .footer_main {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2rem;
+  }
+  .footer_main .logo {
+    grid-column: span 2;
+    text-align: center;
+  }
+  .footer_main .logo img {
+    width: 40%;
+  }
+  .footer_main .logo p {
+    font-size: 0.8rem;
+  }
+  .footer_main .company,
+.footer_main .resources,
+.footer_main .quick {
+    text-align: left;
+  }
+  .footer .copyright h1, .footer .copyright span, .footer .copyright a {
+    font-size: 0.6rem;
+  }
+  .footer .copyright a {
+    cursor: pointer;
   }
 }/*# sourceMappingURL=style.css.map */
