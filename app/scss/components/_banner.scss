@@ -9,7 +9,6 @@
 
 .banner{
     height: 80vh;
-    // border: 2px solid #fff;
     align-items: center;
     z-index: 588;
 
@@ -41,12 +40,12 @@
             font-size: rem(18);
             font-weight: 600;
             padding: 1rem 2rem;
-            box-shadow: 0px 0px 25px 10px var(--blue);
+            box-shadow: 0 0 rem(25) rem(10) var(--blue);
             transition: all 350ms ease-in-out;
 
             &:hover{
                 background-color: var(--lightblue);
-                box-shadow: 0px 0px 20px 5px var(--blue);
+                box-shadow: 0 0 rem(20) rem(10) var(--blue);
             }
         }
     }
@@ -54,7 +53,6 @@
     .image-area{
         margin-top: 5rem;
         grid-column: span 2;
-        // margin: auto;
         position: relative;
 
         img{
@@ -71,11 +69,7 @@
             background-color: transparent;
             border-radius: 500rem;
             z-index: -1;
-            border: none;
-            // box-shadow: 0px 0px 5px 4px var(--white),
-            // 0px 0px 5px 4px var(--white) inset;
-
-            
+            border: none;            
         }
 
         .info{
@@ -88,8 +82,7 @@
             border-radius: 10px;
             position: absolute;
             cursor: pointer;
-            border: 4px solid var(--secondarycolor);
-            // box-shadow: 0px 0px 20px 2px var(--secondarycolor);
+            border: rem(4) solid var(--secondarycolor);
             box-shadow: hsla(206, 6%, 25%, 0.3) 0px 1px 2px 0px, hsla(206, 6%, 25%, 0.15) 0px 1px 3px 1px;
             transition: border 350ms ease-out;
 
@@ -98,8 +91,8 @@
             }
 
             &:hover{
-                box-shadow: 0px 0px 0px 0px ;
-                border: 4px solid var(--lightblue);
+                box-shadow: 0 0 0 0;
+                border: rem(4) solid var(--lightblue);
             }
         }
         .info-expert{
@@ -108,13 +101,13 @@
             z-index: -1000;
         }
         .info-live{
-            top: 180px;
-            left: 10px;
+            top: rem(180);
+            left: rem(10);
         }
 
         .info-chat{
-            bottom: 70px;
-            right: -20px;
+            bottom: rem(70);
+            right: rem(-20);
         }
 
 
@@ -156,11 +149,11 @@
                 grid-column: span 4;
 
                 .info-chat{
-                    right: 20px;
+                    right: rem(20);
                 }
 
                 .info-expert{
-                    right: 30px;
+                    right: rem(30);
                 }
             }
         }
@@ -168,16 +161,16 @@
         @media (max-width:26.25rem) { // 410px
             .image-area{
                 .info-expert{
-                    top: 10px;
+                    top: rem(10);
                 }
 
                 .info-live{
-                    top: 120px;
+                    top: rem(120);
                 }
 
                 .info-chat{
-                    bottom: 30px;
-                    right: 0px;
+                    bottom: rem(30);
+                    right: 0;
                 }
             }
         }

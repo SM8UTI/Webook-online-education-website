@@ -1,4 +1,4 @@
-// same class is here 
+// common class is here 
 
 .btn {
     background-color: var(--primarycolor);
@@ -32,7 +32,7 @@
     outline: none;
     border-radius: 10px;
     margin: 1rem 0;
-    box-shadow: 0px 0px 10px 2px var(--blue);
+    box-shadow: 0px 0px rem(10) rem(2) var(--blue);
 }
 .lowerpart {
     display: flex;
@@ -62,7 +62,7 @@
 }
 
 .blur-neon{
-    box-shadow: 0px 0px 25px 10px var(--secondarycolor);
+    box-shadow: 0px 0px rem(25) rem(10) var(--secondarycolor);
     opacity: 20%;
 }
 

@@ -79,7 +79,7 @@ a, a:visited, a:hover {
   --blue:hsl(183, 100%, 35%);
   --lightblue:hsl(183, 49%, 63%);
   --secondarycolor:hsl(217, 10%, 25%);
-  --Backgroundcolor:hsl(216, 18%, 16%);
+  --Backgroundcolor:hsl(216, 19%, 16%);
   --white:hsl(0, 0%, 100%);
   --darkishwhite:hsl(0, 0%, 78%);
 }
@@ -143,7 +143,7 @@ a, a:visited, a:hover {
   outline: none;
   border-radius: 10px;
   margin: 1rem 0;
-  box-shadow: 0px 0px 10px 2px var(--blue);
+  box-shadow: 0px 0px rem(10) rem(2) var(--blue);
 }
 
 .lowerpart {
@@ -171,7 +171,7 @@ a, a:visited, a:hover {
 }
 
 .blur-neon {
-  box-shadow: 0px 0px 25px 10px var(--secondarycolor);
+  box-shadow: 0px 0px rem(25) rem(10) var(--secondarycolor);
   opacity: 20%;
 }
 
@@ -423,12 +423,12 @@ a, a:visited, a:hover {
   font-size: 1.125rem;
   font-weight: 600;
   padding: 1rem 2rem;
-  box-shadow: 0px 0px 25px 10px var(--blue);
+  box-shadow: 0 0 1.5625rem 0.625rem var(--blue);
   transition: all 350ms ease-in-out;
 }
 .banner .text-area .btn-start-course:hover {
   background-color: var(--lightblue);
-  box-shadow: 0px 0px 20px 5px var(--blue);
+  box-shadow: 0 0 1.25rem 0.625rem var(--blue);
 }
 .banner .image-area {
   margin-top: 5rem;
@@ -461,7 +461,7 @@ a, a:visited, a:hover {
   border-radius: 10px;
   position: absolute;
   cursor: pointer;
-  border: 4px solid var(--secondarycolor);
+  border: 0.25rem solid var(--secondarycolor);
   box-shadow: hsla(206deg, 6%, 25%, 0.3) 0px 1px 2px 0px, hsla(206deg, 6%, 25%, 0.15) 0px 1px 3px 1px;
   transition: border 350ms ease-out;
 }
@@ -469,8 +469,8 @@ a, a:visited, a:hover {
   font-size: 1.125rem;
 }
 .banner .image-area .info:hover {
-  box-shadow: 0px 0px 0px 0px;
-  border: 4px solid var(--lightblue);
+  box-shadow: 0 0 0 0;
+  border: 0.25rem solid var(--lightblue);
 }
 .banner .image-area .info-expert {
   top: 0;
@@ -478,12 +478,12 @@ a, a:visited, a:hover {
   z-index: -1000;
 }
 .banner .image-area .info-live {
-  top: 180px;
-  left: 10px;
+  top: 11.25rem;
+  left: 0.625rem;
 }
 .banner .image-area .info-chat {
-  bottom: 70px;
-  right: -20px;
+  bottom: 4.375rem;
+  right: -1.25rem;
 }
 @media (max-width: 63.9375em) {
   .banner {
@@ -516,22 +516,22 @@ a, a:visited, a:hover {
     grid-column: span 4;
   }
   .banner .image-area .info-chat {
-    right: 20px;
+    right: 1.25rem;
   }
   .banner .image-area .info-expert {
-    right: 30px;
+    right: 1.875rem;
   }
 }
 @media (max-width: 26.25rem) {
   .banner .image-area .info-expert {
-    top: 10px;
+    top: 0.625rem;
   }
   .banner .image-area .info-live {
-    top: 120px;
+    top: 7.5rem;
   }
   .banner .image-area .info-chat {
-    bottom: 30px;
-    right: 0px;
+    bottom: 1.875rem;
+    right: 0;
   }
 }
 
@@ -1003,7 +1003,7 @@ a, a:visited, a:hover {
   flex-direction: column;
   align-items: center;
   background-color: var(--primarycolor);
-  box-shadow: 0px 0px 25px 10px var(--primarycolor);
+  box-shadow: 0 0 1.5625rem 0.625rem var(--primarycolor);
 }
 .about_content {
   display: grid;
