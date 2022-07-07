@@ -98,12 +98,15 @@
                 column-gap: 1rem;
 
                 .box {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    a{
+                        margin: 0;
+                        color: var(--primarycolor);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 1rem;
+                    }
                     background-color: var(--Backgroundcolor);
-                    color: var(--primarycolor);
-                    font-size: 1rem;
                     padding: 0.5rem;
                     clip-path: circle(75%);
                     transition: clip-path 1s;

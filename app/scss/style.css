@@ -1245,18 +1245,21 @@ a, a:visited, a:hover {
        column-gap: 1rem;
 }
 .contact_main .details .social .box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: var(--Backgroundcolor);
-  color: var(--primarycolor);
-  font-size: 1rem;
   padding: 0.5rem;
   -webkit-clip-path: circle(75%);
           clip-path: circle(75%);
   transition: -webkit-clip-path 1s;
   transition: clip-path 1s;
   transition: clip-path 1s, -webkit-clip-path 1s;
+}
+.contact_main .details .social .box a {
+  margin: 0;
+  color: var(--primarycolor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
 }
 .contact_main .details .social .box:hover {
   -webkit-clip-path: circle(44%);
