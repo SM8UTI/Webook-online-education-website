@@ -3,12 +3,20 @@
 @use "../global" as *;
 @use "../util" as *;
 
+.header.sticky{
+        box-shadow: 0 5px 20px hsla(0, 0%, 0%, 0.05);
+        background-color: var(--Backgroundcolor);
+        z-index: 6000;
+}
+
 .header{
+    position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem rem(120);
-    position: relative;
     width: 100%;
     max-width: rem(1500);
     margin: 0 auto;
@@ -100,6 +108,7 @@
     }
 
     @include breakpoint-down(mobile){
+        position: relative;
         .navbar-list{
             z-index: 1000   ;
             display: flex;

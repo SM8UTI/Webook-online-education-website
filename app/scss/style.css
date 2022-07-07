@@ -256,12 +256,20 @@ a, a:visited, a:hover {
   transform: translate(0, 5%);
 }
 
+.header.sticky {
+  box-shadow: 0 5px 20px hsla(0deg, 0%, 0%, 0.05);
+  background-color: var(--Backgroundcolor);
+  z-index: 6000;
+}
+
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 7.5rem;
-  position: relative;
   width: 100%;
   max-width: 93.75rem;
   margin: 0 auto;
@@ -337,6 +345,9 @@ a, a:visited, a:hover {
   }
 }
 @media (max-width: 47.937rem) {
+  .header {
+    position: relative;
+  }
   .header .navbar-list {
     z-index: 1000;
     display: flex;
@@ -387,10 +398,12 @@ a, a:visited, a:hover {
 .banner {
   height: 80vh;
   align-items: center;
+  z-index: 588;
 }
 .banner .text-area {
+  margin-top: 5rem;
   grid-column: span 2;
-  z-index: 888;
+  z-index: 500;
 }
 .banner .text-area .text-part h1 {
   font-size: 3rem;
@@ -418,8 +431,8 @@ a, a:visited, a:hover {
   box-shadow: 0px 0px 20px 5px var(--blue);
 }
 .banner .image-area {
+  margin-top: 5rem;
   grid-column: span 2;
-  margin: 0 auto;
   position: relative;
 }
 .banner .image-area img {
@@ -493,7 +506,7 @@ a, a:visited, a:hover {
   .banner {
     margin-top: 2.5rem;
     padding: 1rem 1.25rem;
-    height: 80vh;
+    height: auto;
     row-gap: 2rem;
   }
   .banner .text-area {
@@ -1081,7 +1094,19 @@ a, a:visited, a:hover {
   row-gap: 2rem;
   flex-direction: column;
 }
+.faq_main .accordian_item.active .answer {
+  max-height: 20rem;
+  width: 100%;
+  max-width: 100%;
+}
+.faq_main .accordian_item.active .link .up {
+  display: block;
+}
+.faq_main .accordian_item.active .link .down {
+  display: none;
+}
 .faq_main .accordian_item {
+  width: 100%;
   background-color: var(--secondarycolor);
   padding: 1rem;
   border-radius: 0.3125rem;
@@ -1101,8 +1126,11 @@ a, a:visited, a:hover {
 }
 .faq_main .accordian_item .link .up {
   display: none;
+  transition: display 1500ms ease-out;
 }
 .faq_main .accordian_item .answer {
+  transition: max-height 800ms ease-in-out;
+  width: 100%;
   max-height: 0;
   overflow: hidden;
   background-color: var(--Backgroundcolor);
@@ -1141,7 +1169,7 @@ a, a:visited, a:hover {
   opacity: 80%;
 }
 .contact_main {
-  margin: 3rem 0;
+  margin: 2rem 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   background-color: var(--secondarycolor);

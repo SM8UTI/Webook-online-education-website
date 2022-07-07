@@ -11,11 +11,13 @@
     height: 80vh;
     // border: 2px solid #fff;
     align-items: center;
+    z-index: 588;
 
 
     .text-area{
+        margin-top: 5rem;
         grid-column: span 2;
-        z-index: 888;
+        z-index: 500;
 
         .text-part{
             h1{
@@ -50,8 +52,9 @@
     }
 
     .image-area{
+        margin-top: 5rem;
         grid-column: span 2;
-        margin: 0 auto;
+        // margin: auto;
         position: relative;
 
         img{
@@ -138,9 +141,10 @@
         }
     
         @include breakpoint-down(small) {
+
             margin-top: rem(40);
             padding: 1rem rem(20);
-            height: 80vh;
+            height: auto;
             row-gap: 2rem;
 
             .text-area {

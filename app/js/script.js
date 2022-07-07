@@ -6,6 +6,12 @@ window.addEventListener("load",()=>{
     loadder.style.display = "none";
 });
 
+//sticky navbar 
+
+window.addEventListener('scroll',function(){
+    const header = document.querySelector('header');
+    header.classList.toggle("sticky",window.scrollY > 0);
+})
 
 // nav bar 
 const header = document.getElementById('header');
@@ -26,3 +32,11 @@ toggle.addEventListener('click',()=>{
 
 
 // faq 
+
+const acc = document.getElementsByClassName('accordian_item');
+
+for(i=0;i<acc.length;i++){
+    acc[i].addEventListener("click",function(){
+        this.classList.toggle('active');
+    });
+};
