@@ -94,6 +94,7 @@ Ex. Navbar, Header section, Services/Features, Courses, FAQ, Contact, Footer, et
 
 <br/>
 
+
 ## 🌐 Color Section
 
 | Color             | Hex                                                                |
