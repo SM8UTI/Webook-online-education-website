@@ -1,3 +1,5 @@
+<img src="app/images/winner.svg" style="width:40%">
+
 ![app](app/images/logo/logo.svg)
 
 
