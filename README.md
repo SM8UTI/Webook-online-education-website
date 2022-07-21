@@ -1,6 +1,5 @@
-<img src="app/images/winner.svg" style="width:40%">
+<img src="app/images/banner.svg" style="width:100%">
 
-![app](app/images/logo/logo.svg)
 
 
 # Webook - Single Page Education Website
