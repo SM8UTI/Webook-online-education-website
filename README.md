@@ -4,9 +4,11 @@
 
 # Webook - Single Page Education Website
 
-This is a solution of a [Thapa Technical Codefest](http://thapacodefest.thapaonlineclass.com/). The Problem Statement is to make a single page Online education website ( only frontend work ). I am Smruti ranjan nayak Btech 1st Year Studet in CSE Branch. I complete this problem below solution you saw every single function, code, and feature. in a few months, I had designed many components or websites, this is my first codefest or hackathon challenge to develop my skills.
+This is a solution of a [Thapa Technical Codefest](http://thapacodefest.thapaonlineclass.com/).
+The Problem Statement is to make a single page Online education website ( only frontend work ). I am Smruti ranjan nayak Btech 1st Year Studet in CSE Branch. I complete this problem below solution you saw every single function, code, and feature. in a few months, I had designed many components or websites, this is my first codefest or hackathon challenge to develop my skills.
 <br/>
 in this project, I learned many things as I had never designed or coded a FAQ section and I had designed this website in Figma first then I had code.
+
 
 here is the [Figma file](Webook.fig)
 
