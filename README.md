@@ -1,10 +1,6 @@
 
 
 <img src="app/images/banner.svg" style="width:100%">
-.
-
-
-
 
 
 # Webook - Single Page Education Website
