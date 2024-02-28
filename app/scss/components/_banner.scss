@@ -95,12 +95,12 @@
                 border: rem(4) solid var(--lightblue);
             }
         }
-        .info-expert{
+        .info-live{
             top: 0;
             right: 0;
             z-index: -1000;
         }
-        .info-live{
+        .info-expert{
             top: rem(180);
             left: rem(10);
         }
@@ -152,7 +152,7 @@
                     right: rem(20);
                 }
 
-                .info-expert{
+                .info-live{
                     right: rem(30);
                 }
             }
@@ -160,11 +160,11 @@
 
         @media (max-width:26.25rem) { // 410px
             .image-area{
-                .info-expert{
+                .info-live{
                     top: rem(10);
                 }
 
-                .info-live{
+                .info-expert{
                     top: rem(120);
                 }
 
