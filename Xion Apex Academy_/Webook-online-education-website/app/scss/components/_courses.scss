@@ -1,0 +1,224 @@
+@use "../global" as *;
+@use "../util" as *;
+
+#courses{
+    margin: 0 auto;
+}
+
+.courses{
+    background-color: var(--secondarycolor);
+    margin: 0;
+    padding-top: 2rem;
+    // position: relative;
+    .text-part{
+        position: relative;
+        h1{
+            font-size: 2.8rem;
+            color: var(--white);
+            text-align: right;
+            margin: 2rem 0;
+            opacity: 80%;
+        }
+        .overlay-text {
+            position: absolute;
+            top: -20px;
+            left: 0;
+            z-index: 10;
+            display: inline-block;
+
+            h2 {
+                font-size: 6rem;
+                opacity: 2%;
+                color: var(--darkishwhite);
+                // transform: rotate(90deg);
+            }
+        }
+    }
+    .main-container{
+        margin-top: 2rem;
+        z-index: 900;
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(rem(275),1fr));
+        gap: 2rem;
+
+        .card{
+            position: relative;
+            z-index: inherit;
+            background-color: var(--Backgroundcolor);
+            border-radius: rem(10);
+            box-shadow: hsla(0, 0%, 0%, 0.24) 0px 3px 8px;
+            overflow: hidden;
+
+            &_image{
+                width: 100%;
+                img{
+                    width: 100%;
+                    aspect-ratio: 1/1;
+                    object-fit: cover;
+                    opacity: 60%;
+                }
+            }
+
+            &_info{
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                row-gap: 2rem;
+                padding: 1rem;
+                margin-bottom: 2rem;
+
+                ion-icon{
+                    font-size: rem(20);
+                }
+
+                &_rating{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .rating_box{
+                        padding: 0.5rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        column-gap: 0.5rem;
+                        background-color: var(--secondarycolor);
+                        border-radius: 5px;
+
+                        ion-icon{
+                            color: var(--primarycolor);
+                        }
+                        span{
+                            font-size: 1rem;
+                            font-weight: 800;
+                            color: var(--primarycolor);       
+                        }
+                    }
+
+                    .rating_text{
+                        p{
+                            font-size: 1.3rem;
+                            margin: 0;
+                            padding: 0;
+                            font-weight: 600;
+                            color: var(--secondarycolor);
+                        }
+                    }
+                }
+
+                &_text{
+                    a{
+                        color: var(--white);
+                        font-size: 1.5rem;
+                        font-weight: 600;
+                        transition: color 350ms ease-in;
+
+                        &:hover{
+                            color: var(--primarycolor);
+                        }
+                    }
+                }
+
+                &_status{
+                    margin: 2rem 0;
+                    display: flex;
+                    flex-direction: row;
+                    column-gap: 0.5rem;
+                    align-items: center;
+                    
+                    ion-icon{
+                        color: var(--primarycolor);
+                    }
+                    .info{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        column-gap: 0.5rem;
+                        padding: 0.3rem 0.5rem;
+                        border-radius: 5px;
+                        background-color: var(--secondarycolor);
+
+                        p{
+                            margin: 0;
+                            padding: 0;
+
+                        }
+                    }
+                }
+
+                &_price{
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    padding: 1rem;
+                    // margin-bottom: 2rem;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-direction: row;
+                    
+
+                    p{
+                        margin: 0;
+                        padding: 0;
+                    }
+
+                    .price{
+                        display: flex;  
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: row;
+                        column-gap: 0.4rem;
+
+                        h1{
+                            font-size: 2rem ;
+                            color: var(--primarycolor);
+                        }
+                        p{
+                            text-decoration: line-through;
+                            font-size: 1.3rem;
+                            color: var(--darkishwhite);
+                        }
+                    }
+
+                    .btn-learnmore{
+                        outline: none;
+                        border: none;
+                        cursor: pointer;
+                        font-size: 1rem;
+                        font-weight: 800;
+                        border-radius: rem(5);
+                        transition: all 350ms ease-in;
+
+                        &:hover{
+                            background-color: var(--blue);
+
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+
+    @include breakpoint-down(x-large) {
+        padding: 3rem rem(60);
+    }
+
+    @include breakpoint-down(small) {
+        padding: 3rem rem(20);
+
+        .text-part{
+            .overlay-text{
+                top: rem(-10);
+                left: 0;
+                h2{
+                    transform: rotate(90deg);
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}

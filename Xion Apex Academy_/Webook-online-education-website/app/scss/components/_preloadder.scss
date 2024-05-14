@@ -1,0 +1,19 @@
+@use "../util" as *;
+
+#preloadder{
+    width: 100%;
+    height: 100vh;
+    background-color:#101010;
+    background-image:var(--preloadder) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 15%;
+    z-index: 10000;
+    position: fixed;
+
+    @include breakpoint-down(small){
+        background-size: 20%;
+    }
+
+}
+

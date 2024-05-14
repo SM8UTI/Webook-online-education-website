@@ -1,0 +1,122 @@
+@use "../global" as *;
+@use "../util" as *;
+
+#footer {
+    margin: 0 auto;
+}
+
+.footer{
+    min-height: auto;
+    width: 100%;
+    max-width: rem(1500);
+    padding: 1rem rem(120);
+    margin: 4rem;
+    
+
+    &_main{
+        margin: 4rem 0;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(rem(250),1fr));
+        column-gap: 2rem;
+        align-items: center;
+
+        .logo{
+            text-align: left;
+        }
+
+        .company,.resources,.quick{
+            text-align: right;
+            h1{
+                font-size: 1.8rem;
+                font-weight: 600;
+                color: var(--primarycolor);
+            }
+            ul{
+                display: flex;
+                justify-content: right;
+                flex-direction: column;
+                li{
+                    a{
+                        font-size: 1rem;
+                        color: var(--darkishwhite);
+                        transition: all 350ms ease-in-out;
+
+                        &:hover{
+                            color: var(--blue);
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
+    .copyright{
+        color: var(--white);
+        opacity: 80%;
+        letter-spacing: rem(1);
+        font-weight: 400;
+        font-size: 0.8rem;
+        text-align: center;
+
+        h1{
+            font-size: 0.8rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 0.3rem;
+        }
+
+        span,a{
+            font-size: 0.9rem;
+            color: var(--primarycolor);
+        }
+
+        a{
+            cursor: pointer;
+        }
+    }
+
+    @include breakpoint-down(x-large) {
+        padding: 1rem rem(60);
+    }
+
+    @include breakpoint-down(small) {
+        padding: 1rem rem(20);
+
+        &_main{
+            grid-template-columns: 1fr 1fr;
+            row-gap: 2rem;
+
+            .logo{
+                grid-column: span 2;
+                text-align: center;
+
+                img{
+                    width: 40%;
+                }
+
+                p{
+                    font-size: 0.8rem;
+                }
+            }
+
+            .company,
+            .resources,
+            .quick {
+                text-align: left;
+            }
+        }
+
+        .copyright{
+            h1,span,a{
+                font-size: 0.6rem;
+            }
+
+            a{
+                cursor: pointer;
+            }
+        }
+    }
+}

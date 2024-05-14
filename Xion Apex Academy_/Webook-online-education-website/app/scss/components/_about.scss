@@ -1,0 +1,92 @@
+@use "../global" as *;
+@use "../util" as *;
+
+#about{
+    margin: 0 auto;
+}
+
+.about{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--primarycolor);
+    box-shadow: 0 0 rem(25) rem(10) var(--primarycolor);
+
+    &_content{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2rem;
+
+        .text{
+            color: var(--white);
+            line-height: 1.7;
+            h2{
+                font-size: 2.8rem;
+                margin: 1rem 0;
+            }
+            p{
+                color: var(--white);
+            }
+            h1{
+                font-size: 4rem;
+                opacity: 60%;
+                text-align: right;
+            }
+        }
+
+        .image{
+            width: 100%;
+            height: 100%;
+            img{
+                opacity: 70%;
+            }
+        }
+    }
+
+    &_stats{
+        margin: 5rem 0;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 2rem;
+
+
+        .card{
+            border-radius: rem(3);
+            background-color: var(--Backgroundcolor);
+            color: var(--white);
+            padding: 2rem;
+            text-align: center;
+            text-transform: uppercase;
+
+            p{
+                margin: 0;
+                font-weight: 400;
+            }
+        }
+    }
+
+    @include breakpoint-down(x-large) {
+        padding: 3rem rem(60);
+    }
+
+    @include breakpoint-down(small) {
+        padding: 3rem rem(20);
+
+        &_content{
+            .text{
+                grid-column: span 2;
+            }
+
+            .image{
+                grid-column: span 2;
+            }
+        }
+
+        &_stats{
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}

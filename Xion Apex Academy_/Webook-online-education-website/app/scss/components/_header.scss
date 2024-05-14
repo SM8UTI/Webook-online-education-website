@@ -1,0 +1,164 @@
+// header or navbar class is here 
+
+@use "../global" as *;
+@use "../util" as *;
+
+.header.sticky{
+        box-shadow: 0 5px 20px hsla(0, 0%, 0%, 0.05);
+        background-color: var(--Backgroundcolor);
+        z-index: 6000;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem rem(120);
+    width: 100%;
+    max-width: rem(1500);
+    margin: 0 auto;
+
+
+
+    .logo{
+        width: rem(160);
+    }
+
+    .navbar{
+        &-list{
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+
+            .navbar-links{
+                color: var(--white);
+                font-size: rem(16);
+                font-weight: 600;
+                letter-spacing: rem(2);
+                display: inline-block;
+
+                &::after{
+                    content: '';
+                    display: block;
+                    width:0 ;
+                    height: rem(2);
+                    background-color: var(--primarycolor);
+                    transition: all 350ms;
+                    border-radius: rem(5);
+                }
+
+                &:hover::after{
+                    width: 100%;
+                }
+
+
+            }
+
+            .btn-get-courses{
+                position: relative;
+                overflow: hidden;
+                
+                span{
+                    font-size: rem(20);
+                }
+
+
+                &::after{
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    transform: translateX(100%);
+                    transition: all 350ms ease-out;
+                    position: absolute;
+                    opacity: 20%;
+                    top: 0;
+                    left: 0;
+                    background-color: var(--blue);
+
+                }
+
+                &:hover::after{
+                    transform: translateX(0);
+                }
+            }
+        }
+}
+    .menu-hamburger{
+        display: none;
+    }
+
+    @include breakpoint-down(x-large) {
+        padding: 1rem rem(60);
+    }
+    @include breakpoint-down(large) {
+        padding: 1rem rem(40);
+
+    }
+
+    @include breakpoint-down(small) {
+        padding: 1rem rem(20);
+
+        .logo {
+            width: rem(120);
+        }
+
+    }
+
+    @include breakpoint-down(mobile){
+        position: relative;
+        .navbar-list{
+            z-index: 1000   ;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            width: 60%;
+            height: 100vh;
+            bottom: 0;
+            right: -100%;
+            background-color: var(--secondarycolor);
+            transition: all 350ms ease-out;
+            
+
+            .navbar-links {
+                font-size: rem(24);
+            }
+            
+        }
+
+        .navbar-list.active{
+            right: 0;
+        }
+
+
+
+        .menu-hamburger{
+            position: fixed;
+            top: 0.8rem;
+            right: 0rem;
+            z-index: 9999;
+            display: block;
+            width: 3rem;
+            aspect-ratio: 1/1;
+            background-color: var(--primarycolor);
+            background-image: var(--toggleimg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 5px 0px 0px 5px;
+            box-shadow: hsla(0, 0%, 0%, 0.24) 0px 3px 8px;
+            cursor: pointer;
+        }
+
+        .menu-hamburger.active{
+            background-color: var(--lightblue);
+            background-image: var(--toggleactiveimg);
+        }
+
+
+    }
+}

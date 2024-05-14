@@ -1,0 +1,151 @@
+@use "../global" as *;
+@use "../util" as *;
+
+
+#expert{
+    margin: 0 auto;
+}
+
+.expert {
+    position: relative;
+    margin-bottom: 10rem; 
+    &_circle{
+        position: absolute;
+        top: rem(160);
+        left: rem(-30);
+    }
+    &_text {
+        width: 50%;
+        margin-bottom: 3rem;
+
+        h1 {
+            font-size: 2.8rem;
+            color: var(--white);
+            opacity: 80%;
+        }
+    }
+
+    &_main {
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(rem(275) , 1fr));
+        gap: 2rem;
+
+
+        .card{
+            z-index: 888;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows:300px 1fr 1fr 1fr;
+            background-color: var(--secondarycolor);
+            padding: 0.5rem;
+            row-gap: 1rem;
+            border-radius: rem(5);
+            &_image{
+                overflow: hidden;
+                width: 100%;
+                height: 100%;
+                position: relative;
+                border-radius: rem(5);
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                .overlay-gradient {
+                    width: 100%;
+                    height: 100%;
+                    z-index: 1;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-color: var(--primarycolor);
+                    width: 100%;
+                    height: 100%;
+                    cursor: pointer;
+                    transition: all 350ms ease-in;
+                    opacity: 40%;
+
+                    &:hover{
+                        background-color: var(--Backgroundcolor);
+                    }
+                    }
+            }
+            &_name{
+                font-size: 1.8rem;
+                color: var(--white);
+            }
+            &_job{
+                font-size: 1.2rem;
+                font-weight: 600;
+                color: var(--darkishwhite);
+                opacity: 60%;
+            }
+            &_social{
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                flex-direction: row;
+                gap: 1rem;
+
+                a{
+                    background-color: var(--blue);
+                    color: var(--white);
+                    padding: 0.5rem;
+                    border-radius: rem(5);
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition: all 350ms ease-in-out;
+
+                    ion-icon{
+                        padding: 0;
+                        margin: 0;
+                        font-size: 2rem;
+                    }
+
+                    &:hover{
+                        background-color: var(--Backgroundcolor);
+                        color: var(--primarycolor);
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    @include breakpoint-down(x-large) {
+        padding: 3rem rem(60);
+    }
+
+    @include breakpoint-down(small) {
+        padding: 3rem rem(20);
+
+        &_text {
+            width: 100%;
+        }
+
+        &_main {
+            text-align: center;
+
+           .card{
+                &_social{
+                   justify-content: center; 
+                }
+            }
+        }
+        &_circle {
+            position: absolute;
+            top: rem(300);
+            left: rem(-10);
+        }
+        &_circle2 {
+            position: absolute;
+            bottom: rem(300);
+            right: rem(-10);
+        }
+    }
+
+}

@@ -1,0 +1,78 @@
+@use "../global" as *;
+@use "../util" as *;
+
+.subscribe{
+    background-color: var(--primarycolor);
+    padding:1rem rem(120) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    line-height: 1.7;
+    letter-spacing: rem(2);
+
+    .text{
+        h1{
+            font-size: 2.8rem;
+            color: var(--white);
+
+        }
+        p{
+            color: var(--white);
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+    }
+
+    .input{
+        width: 60%;
+        max-width: rem(1000);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        row-gap: 2rem;
+        color: var(--primarycolor);
+
+        input{
+            width: 100%;
+            border-radius: rem(5);
+            background-color: var(--Backgroundcolor);
+            color: var(--primarycolor);
+            outline: none;
+            border: none;
+            padding: 1rem;
+
+        }
+
+        button{
+            cursor: pointer;
+            background-color: var(--Backgroundcolor);
+            color: var(--primarycolor);
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-weight: 800;
+            outline: none;
+            border: none;
+            margin: 1rem auto;
+            transition: all 350ms ease-in;
+
+            &:hover{
+                background-color: var(--secondarycolor);
+
+            }
+        }
+    }
+
+    @include breakpoint-down(x-large) {
+        padding: 1rem rem(60);
+    }
+    
+    @include breakpoint-down(small) {
+        padding: 1rem rem(20);
+
+        .input{
+            width: 100%;
+        }
+    }
+}
