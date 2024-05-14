@@ -1,0 +1,27 @@
+
+// this is media query function you also called media query mixin
+
+$breakpoints-up:(
+    "large":64em,
+    "x-large":70.625rem,
+    "small":50.625em,
+    "mobile":48rem,
+);
+
+$breakpoints-down:(
+    "large":63.9375em,
+    "x-large":70.625rem,
+    "small":50.625em,
+    "mobile":47.937rem,
+);
+
+@mixin breakpoint-down($size) {
+    @media (max-width:map-get($breakpoints-down,$size)){
+        @content;
+    }   
+}
+@mixin breakpoint($size) {
+    @media (min-width:map-get($breakpoints-up,$size)){
+        @content;
+    }   
+}

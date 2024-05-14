@@ -1,0 +1,63 @@
+@use "../util" as *;
+
+html{
+    font-size: 16px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    line-height: 1.5;
+
+}
+/* width */
+::-webkit-scrollbar {
+    width: rem(10);
+    background-color: var(--lightblue);
+    outline: 1px solid slategrey;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--lightblue);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--blue);
+}
+
+
+*,*::after,*::before{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: var(--outfit);
+    background-color: var(--Backgroundcolor);
+    overflow-x: hidden;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+li{
+    list-style: none;
+}
+
+img{
+    width: 100%;
+}
+
+section,footer{
+    width: 100%;
+    max-width: rem(1500);
+    min-height: 100vh;
+    padding: 1rem rem(120);
+}
+
+ion-icon{
+    font-size: rem(36);
+    cursor: pointer;
+}
