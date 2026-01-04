@@ -17,10 +17,6 @@ here is the [Figma file](Webook.fig)
 
 <br/>
 
-
-
-
-
 ## 🖥️ Challenge Description : 
 
 
